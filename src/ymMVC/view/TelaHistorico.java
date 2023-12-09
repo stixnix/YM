@@ -37,9 +37,9 @@ public class TelaHistorico extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabelResultadoTotal = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jLabel = new javax.swing.JLabel();
+        jButtonEncerrarMes = new javax.swing.JButton();
+        jButtonVerTabela = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(0, 0, 0));
@@ -138,21 +138,21 @@ public class TelaHistorico extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
 
-        jLabel5.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
-        jLabel5.setText("Valor Total:");
+        jLabel.setFont(new java.awt.Font("Verdana", 0, 20)); // NOI18N
+        jLabel.setText("Valor Total:");
 
-        jButton1.setBackground(new java.awt.Color(102, 102, 102));
-        jButton1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton1.setText("Encerrar Mês");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonEncerrarMes.setBackground(new java.awt.Color(102, 102, 102));
+        jButtonEncerrarMes.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jButtonEncerrarMes.setText("Encerrar Mês");
+        jButtonEncerrarMes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonEncerrarMesActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(102, 102, 102));
-        jButton2.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jButton2.setText("Ver Tabela");
+        jButtonVerTabela.setBackground(new java.awt.Color(102, 102, 102));
+        jButtonVerTabela.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jButtonVerTabela.setText("Ver Tabela");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -160,9 +160,9 @@ public class TelaHistorico extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jButton1)
+                .addComponent(jButtonEncerrarMes)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2)
+                .addComponent(jButtonVerTabela)
                 .addGap(22, 22, 22))
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -176,7 +176,7 @@ public class TelaHistorico extends javax.swing.JFrame {
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(20, 20, 20)
-                    .addComponent(jLabel5)
+                    .addComponent(jLabel)
                     .addContainerGap(561, Short.MAX_VALUE)))
         );
         jPanel3Layout.setVerticalGroup(
@@ -188,13 +188,13 @@ public class TelaHistorico extends javax.swing.JFrame {
                 .addComponent(jLabelResultadoTotal)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 270, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
+                    .addComponent(jButtonEncerrarMes)
+                    .addComponent(jButtonVerTabela))
                 .addGap(27, 27, 27))
             .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel3Layout.createSequentialGroup()
                     .addGap(37, 37, 37)
-                    .addComponent(jLabel5)
+                    .addComponent(jLabel)
                     .addContainerGap(332, Short.MAX_VALUE)))
         );
 
@@ -226,9 +226,9 @@ public class TelaHistorico extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void jButtonEncerrarMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEncerrarMesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButtonEncerrarMesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -266,12 +266,12 @@ public class TelaHistorico extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonEncerrarMes;
+    private javax.swing.JButton jButtonVerTabela;
+    private javax.swing.JLabel jLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabelResultadoTotal;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
