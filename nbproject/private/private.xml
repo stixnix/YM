@@ -4,8 +4,10 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/291500474/Documents/NetBeansProjects/YM/src/ymMVC/Controller/YM.java</file>
-            <file>file:/C:/Users/291500474/Documents/NetBeansProjects/YM/src/ymMVC/view/YMTelaCadastro.java</file>
             <file>file:/C:/Users/291500474/Documents/NetBeansProjects/YM/src/ymMVC/dao/Conexao.java</file>
+            <file>file:/C:/Users/291500474/Documents/NetBeansProjects/YM/src/ymMVC/view/YMTelaCadastro.java</file>
+            <file>file:/C:/Users/291500474/Documents/NetBeansProjects/YM/src/ymMVC/view/YMTelaRegistro.java</file>
+            <file>file:/C:/Users/291500474/Documents/NetBeansProjects/YM/src/ymMVC/view/TelaHistorico.java</file>
         </group>
     </open-files>
 </project-private>
