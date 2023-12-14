@@ -5,6 +5,8 @@
  */
 package ymMVC.view;
 
+import ymMVC.Controller.YMcontroller;
+
 /**
  *
  * @author 291500474
@@ -38,24 +40,24 @@ public class YMTelaRegistro extends javax.swing.JFrame {
         jLabel8 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        jTextvalor = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jComboBoxDia = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
-        jComboBoxParcelas = new javax.swing.JComboBox<>();
         jPanel5 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jButtonInserirRegistro = new javax.swing.JButton();
         jButtonExcluir = new javax.swing.JButton();
         jTexPagamento = new javax.swing.JTextField();
-        jTextPagamento = new javax.swing.JTextField();
+        jTextDia = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         jButtonEncerrarMes = new javax.swing.JButton();
+        jTextPagamento = new javax.swing.JTextField();
+        jTextParcela = new javax.swing.JTextField();
 
         jTextField5.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jTextField5.addActionListener(new java.awt.event.ActionListener() {
@@ -163,7 +165,7 @@ public class YMTelaRegistro extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel10.setText("Descrição:");
 
-        jTextField1.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jTextvalor.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
 
         jLabel11.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel11.setText("Valor:");
@@ -179,24 +181,8 @@ public class YMTelaRegistro extends javax.swing.JFrame {
         jLabel14.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel14.setText("Forma Pagamento:");
 
-        jComboBoxDia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jComboBoxDia.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" }));
-        jComboBoxDia.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxDiaActionPerformed(evt);
-            }
-        });
-
         jLabel15.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
         jLabel15.setText("Categoria:");
-
-        jComboBoxParcelas.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
-        jComboBoxParcelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12" }));
-        jComboBoxParcelas.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxParcelasActionPerformed(evt);
-            }
-        });
 
         jPanel5.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -224,6 +210,11 @@ public class YMTelaRegistro extends javax.swing.JFrame {
         jButtonInserirRegistro.setBackground(new java.awt.Color(102, 102, 102));
         jButtonInserirRegistro.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
         jButtonInserirRegistro.setText("Inserir Registro");
+        jButtonInserirRegistro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonInserirRegistroActionPerformed(evt);
+            }
+        });
 
         jButtonExcluir.setBackground(new java.awt.Color(102, 102, 102));
         jButtonExcluir.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
@@ -231,7 +222,7 @@ public class YMTelaRegistro extends javax.swing.JFrame {
 
         jTexPagamento.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
 
-        jTextPagamento.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+        jTextDia.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
 
         jTable1.setAutoCreateRowSorter(true);
         jTable1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED, null, null, new java.awt.Color(255, 255, 255), new java.awt.Color(255, 255, 255)));
@@ -254,6 +245,10 @@ public class YMTelaRegistro extends javax.swing.JFrame {
             }
         });
 
+        jTextPagamento.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+
+        jTextParcela.setFont(new java.awt.Font("Tahoma", 0, 20)); // NOI18N
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
@@ -271,7 +266,7 @@ public class YMTelaRegistro extends javax.swing.JFrame {
                                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(52, 52, 52)
                                 .addComponent(jButtonInserirRegistro))
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTextvalor, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 59, Short.MAX_VALUE)
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(78, 78, 78))
@@ -284,18 +279,14 @@ public class YMTelaRegistro extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jLabel13)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jComboBoxParcelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel14))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jLabel13)
+                        .addGap(18, 18, 18)
+                        .addComponent(jTextParcela, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel14)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel12)
                         .addGap(18, 18, 18)
-                        .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jTextDia, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 735, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(32, 32, 32)
@@ -303,6 +294,11 @@ public class YMTelaRegistro extends javax.swing.JFrame {
                             .addComponent(jButtonEncerrarMes)
                             .addComponent(jButtonExcluir))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(209, 209, 209)
+                    .addComponent(jTextPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, 322, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(462, Short.MAX_VALUE)))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -317,24 +313,22 @@ public class YMTelaRegistro extends javax.swing.JFrame {
                         .addGap(32, 32, 32)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel11)
-                            .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jTextvalor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel15)
                     .addComponent(jTexPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(27, 27, 27)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                .addComponent(jLabel14)
+                .addGap(34, 34, 34)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel13)
-                    .addComponent(jComboBoxParcelas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextParcela, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
-                    .addComponent(jComboBoxDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jTextDia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
@@ -345,6 +339,11 @@ public class YMTelaRegistro extends javax.swing.JFrame {
                         .addGap(42, 42, 42)
                         .addComponent(jButtonExcluir)))
                 .addGap(24, 80, Short.MAX_VALUE))
+            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel2Layout.createSequentialGroup()
+                    .addGap(201, 201, 201)
+                    .addComponent(jTextPagamento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(669, Short.MAX_VALUE)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -368,14 +367,6 @@ public class YMTelaRegistro extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jComboBoxDiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxDiaActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxDiaActionPerformed
-
-    private void jComboBoxParcelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxParcelasActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBoxParcelasActionPerformed
-
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
@@ -383,6 +374,14 @@ public class YMTelaRegistro extends javax.swing.JFrame {
     private void jButtonEncerrarMesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonEncerrarMesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonEncerrarMesActionPerformed
+
+    private void jButtonInserirRegistroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonInserirRegistroActionPerformed
+        YMcontroller yc = new YMcontroller();
+        int valor = Integer.parseInt(jTextvalor.getText());
+        int dia = Integer.parseInt(jText.getText());
+        
+        
+    }//GEN-LAST:event_jButtonInserirRegistroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -423,8 +422,6 @@ public class YMTelaRegistro extends javax.swing.JFrame {
     private javax.swing.JButton jButtonEncerrarMes;
     private javax.swing.JButton jButtonExcluir;
     private javax.swing.JButton jButtonInserirRegistro;
-    private javax.swing.JComboBox<String> jComboBoxDia;
-    private javax.swing.JComboBox<String> jComboBoxParcelas;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -445,9 +442,11 @@ public class YMTelaRegistro extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTexPagamento;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextDia;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextPagamento;
+    private javax.swing.JTextField jTextParcela;
+    private javax.swing.JTextField jTextvalor;
     // End of variables declaration//GEN-END:variables
 }

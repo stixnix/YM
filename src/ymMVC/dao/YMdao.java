@@ -5,6 +5,7 @@
  */
 package ymMVC.dao;
 
+import javax.swing.JOptionPane;
 import ymMVC.model.YMmodel;
 
 /**
@@ -14,7 +15,16 @@ import ymMVC.model.YMmodel;
 public class YMdao {
 
     public void incluir(YMmodel ym) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        String sql = "INSERT INTO Livros (Descricao, valor, categoria, dia, parcela, pagamento) VALUES ("
+                + " '" + ym.getDescricao() + "' ,  "
+                + " " + ym.getValor() + " , "
+                + " '" + ym.getCategoria() + "' , "
+                + " " + ym.getDia() + "  , "
+                + " " + ym.getParcela() + "  , "
+                + " " + ym.getPagamento() + "  ) ";
+        Conexao.executar(sql);
+        JOptionPane.showMessageDialog(null, "Registro incluido com sucesso!!!");
+
     }
     
 }
