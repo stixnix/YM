@@ -120,7 +120,7 @@ public class TelaHistorico extends javax.swing.JFrame {
 
             },
             new String [] {
-                "Descrição", "Categoria", "Forma Pagamento", "Valor", "Data", "Parcela"
+                "ID", "Descrição", "Valor", "Forma Pagamento", "Categoria", "Data", "Parcela"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -197,7 +197,7 @@ public class TelaHistorico extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabelResultadoTotal)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 271, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 268, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButtonEncerrarMes)
                     .addComponent(jButtonVerTabela))

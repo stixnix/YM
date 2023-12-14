@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class Conexao {
     
     //private static final String URL = "jdbc:mysql://127.0.0.1:3306/faculdade?zeroDateTimeBehavior=convertToNull";
-    private static final String URL = "jdbc:mysql://localhost:3306/YM?useTimezone=true&serverTimezone=UTC";
+    private static final String URL = "jdbc:mysql://localhost:3306/registros?useTimezone=true&serverTimezone=UTC";
     private static final String USER = "root";
     
     // para quem instalou o XAMPP

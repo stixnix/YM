@@ -5,6 +5,10 @@
  */
 package ymMVC.Controller;
 //qualquercoisa
+
+import javax.swing.JFrame;
+import ymMVC.view.YMTelaRegistro;
+
 /**
  *
  * @author 291500474
@@ -15,7 +19,11 @@ public class YM {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
-    }
+        YMTelaRegistro j = new YMTelaRegistro();
+
+        j.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        j.setSize(1000, 1000);
+        j.setVisible(true);
+    }    
     
 }
